@@ -33,37 +33,41 @@
             <TextBlock  Margin="0 10 0 0" Text="Description"/>
             <TextBox Padding="2"/>
 
-            <!--Read only box-->
+            <!-- Status and Revision Information -->
             <Grid>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="2*"/>
                     <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
+
+                <!-- Status -->
                 <StackPanel Grid.Column="0" Margin="0 0 10 0">
-                    <TextBlock  Margin="0 10 0 0" Text="Stataus"/>
+                    <TextBlock  Margin="0 10 0 0" Text="Status"/>
                     <TextBox Padding="2" Background="LightGray" IsReadOnly="True"/>
                 </StackPanel>
 
+                <!-- Revision -->
                 <StackPanel Grid.Column="1">
                     <TextBlock  Margin="0 10 0 0" Text="Revision"/>
                     <TextBox Padding="2" Background="LightGray" IsReadOnly="True"/>
 
                 </StackPanel>
             </Grid>
-            <!--CheckBoxes -->
-            <TextBlock Margin ="0 0 10 0"  Text="Raw" FontWeight="Bold"/>
-            <TextBlock Margin ="0 0 10 0"  Text="Material" FontWeight="Bold"/>
+            <!-- Material Selection -->
+            <TextBlock Margin ="0 15 10 15"  Text="Raw material" FontWeight="Bold"/>
+            <TextBlock Margin ="0 0 10 0"  Text="Material"/>
             <ComboBox Padding="2" SelectedIndex="0">
                 <ComboBoxItem Content="Item 1"/>
                 <ComboBoxItem Content="Item 2"/>
                 <ComboBoxItem Content="Item 3"/>
                 <ComboBoxItem Content="Item 4"/>
             </ComboBox>
-            <TextBlock Margin ="0 0 10 0"  Text="Manufacturing Details" FontWeight="Bold"/>
 
+            <!-- Manufacturing Details  -->
+            <TextBlock Margin ="0 15 0 15"  Text="Manufacturing information" FontWeight="Bold"/>
+
+            <!-- Work Centers -->
             <TextBlock Margin ="0 0 10 0"  Text="Work Centers"/>
-
-            <!--CheckBoxes -->  
             <StackPanel>
                 <Grid>
                     <Grid.ColumnDefinitions>
@@ -89,8 +93,62 @@
                     </StackPanel>
                 </Grid>
             </StackPanel>
+
+            <!-- Length -->
+            <StackPanel>
+                <TextBlock Text="Length"/>
+                <TextBox Padding="2"/>
+            </StackPanel>
+
+            <!-- Mass -->
+            <StackPanel>
+                <TextBlock Text="Mass"/>
+                <TextBox Padding="2" IsReadOnly="True" Background="LightGray"/>
+            </StackPanel>
+
+            <!-- Finish information  -->
+            <StackPanel>
+                <TextBlock Text="Finish"/>
+                <ComboBox SelectedIndex="0">
+                    <ComboBoxItem Content="Painted"/>
+                    <ComboBoxItem Content="Brushed"/>
+                    <ComboBoxItem Content="No finish"/>
+                </ComboBox>
+            </StackPanel>
+
+            <!-- Purchase Info Section -->
+            <StackPanel>
+                <TextBlock Text="Purchase Information"/>
+                <ComboBox SelectedIndex="0">
+                    <ComboBoxItem Content="Rubber"/>
+                    <ComboBoxItem Content="Plastic"/>
+                    <ComboBoxItem Content="Wood"/>
+                </ComboBox>
+            </StackPanel>
+
+            <!-- Supplier Info Section-->
+            <StackPanel>
+                <TextBlock Text="Supplier Name"/>
+                <TextBox Padding="2"/>
+            </StackPanel>
+            <StackPanel>
+                <TextBlock Text="Supplier Code"/>
+                <TextBox Padding="2"/>
+            </StackPanel>
+            <StackPanel>
+
+                <!-- Additional Info Section -->
+                <TextBlock Margin="0 15 0 15" Text="Additional Info" FontWeight="Bold"/>
+                <TextBlock Text="Note"/>
+                <TextBox 
+                    Height="150"
+                    ScrollViewer.HorizontalScrollBarVisibility="Auto" 
+                    ScrollViewer.CanContentScroll="True" 
+                    ScrollViewer.VerticalScrollBarVisibility="Visible" 
+                    TextWrapping="Wrap">
+                </TextBox>
+
+            </StackPanel>
         </StackPanel>
-
-
     </Border>
 </Window>

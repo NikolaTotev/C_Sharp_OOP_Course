@@ -126,7 +126,7 @@ namespace AccountApp
 
         public override string ToString()
         {
-            return string.Format("Account:\nBalance: {0}, ID: {1} \n ", balance, id);
+            return string.Format("Account:\nalance: {0}, ID: {1} \n ", balance, id);
 
         }
     }
