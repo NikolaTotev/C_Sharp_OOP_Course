@@ -5,8 +5,112 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Calculator"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        
-    </Grid>
+        Title="Calculator" Height="216" Width="298" Background="Gray">
+
+    <!-- !! Ask if there is a way to declare a variable to be used in place of margin -->
+
+    <StackPanel>
+        <TextBox Text="0" Margin="20" TextAlignment="Right"/>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="3*"/>
+                <ColumnDefinition Width="2*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <!-- Number pad -->
+            <StackPanel Grid.Column="0" >
+                <Grid Margin="30 0 30 0 "  Background="LightGray" >
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+
+                    <!-- First Row -->
+                    <Button Margin="4" Grid.Column="0" Grid.Row="0" Content="1"/>
+                    <Button Margin="4" Grid.Column="1" Grid.Row="0" Content="2"/>
+                    <Button Margin="4" Grid.Column="2" Grid.Row="0" Content="3"/>
+
+                    <!-- Second Row -->
+                    <Button Margin="4" Grid.Column="0" Grid.Row="1" Content="4"/>
+                    <Button Margin="4" Grid.Column="1" Grid.Row="1" Content="5"/>
+                    <Button Margin="4" Grid.Column="2" Grid.Row="1" Content="6"/>
+
+
+                    <!-- Third Row -->
+                    <Button Margin="4" Grid.Column="0" Grid.Row="2" Content="7"/>
+                    <Button Margin="4" Grid.Column="1" Grid.Row="2" Content="8"/>
+                    <Button Margin="4" Grid.Column="2" Grid.Row="2" Content="9"/>
+
+                </Grid>
+
+                <!-- Bottom buttons -->
+                <Grid Margin="30 0 30 0" Background="LightGray">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="2*"/>
+                    </Grid.ColumnDefinitions>
+                    <Button Margin="4" Grid.Column="0"  Content="0"/>
+                    <Button Margin="4" Grid.Column="1"  Content="00"/>
+
+                </Grid>
+            </StackPanel>
+
+            
+            <!-- Operation panel -->
+                <StackPanel Grid.Column="1" Margin="0 0 30 0" Background="LightGray">
+
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <!-- Column 1 -->
+                    <Grid Grid.Column="0">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="3*"/>
+                            <RowDefinition Height="*"/>
+                        </Grid.RowDefinitions>
+                        <Button Margin="4" Content="+" Grid.Row="0"/>
+                        <Button Margin="4" Content="." Grid.Row="1"/>
+                    </Grid>
+
+                    <!-- Column 2 -->
+                    <Grid Grid.Column="1">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="*"/>
+                        </Grid.RowDefinitions>
+                        <Button Margin="4" Content="x" Grid.Row="1"/>
+                        <Button Margin="4" Content="-" Grid.Row="0"/>
+                        <Button Margin="4" Content="/" Grid.Row="2"/>
+                        <Button Margin="4" Content="=" Grid.Row="3"/>
+                    </Grid>
+                </Grid>
+            </StackPanel>
+
+            <!-- Other operations -->
+            <StackPanel Grid.Column="2" Margin="0 0 15 0" >
+                <Grid Background="LightGray">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    <Button Margin="4" Content="C" Grid.Row="0"/>
+                    <Button Margin="4" Content="C/A" Grid.Row="1"/>
+                </Grid>
+
+                <Button Margin="0 25 0 0" Content="OFF"/>
+            </StackPanel>
+        </Grid>
+    </StackPanel>
 </Window>
