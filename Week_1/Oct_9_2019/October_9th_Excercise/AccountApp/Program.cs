@@ -10,6 +10,14 @@ namespace AccountApp
     {
         static void Main(string[] args)
         {
+            Account account = new Account();
+            Console.WriteLine("Set balance 30");
+            account.Balance = 30;
+            Console.WriteLine(account);
+            Console.WriteLine("Withdraw 10");
+            account.Withdraw(10m);
+            Console.WriteLine(account);
+
         }
     }
 }

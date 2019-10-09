@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 
 namespace AccountApp
 {
@@ -12,13 +13,42 @@ namespace AccountApp
     /// </summary>
     public class Account
     {
+
+        #region DataMembers
+        /// <summary>
+        /// Datamembers
+        /// </summary>
         private decimal anualInterestRate;
 
         private decimal balance;
-        private int dateCreated;
+        private string dateCreated;
         private int id;
 
-        public int AnualInterestRate
+        #endregion
+
+        #region Constructor
+
+
+        /// <summary>
+        /// Default Constructor
+        /// </summary>
+        public Account()
+        {
+            DateCreated = "Missing";
+        }
+
+        public Account(decimal anualInterestRate, decimal balance, string dateCreated, int id)
+        {
+            AnualInterestRate = anualInterestRate;
+            Balance = balance;
+            DateCreated = dateCreated;
+        }
+
+        #endregion
+
+        #region Properties
+
+        public decimal AnualInterestRate
         {
             get => default;
             set
@@ -26,19 +56,38 @@ namespace AccountApp
             }
         }
 
-        public int Balance
+        public decimal Balance
         {
             get => default;
             set
             {
+                if (value >= balance)
+                {
+                    balance = value;
+                }
+                else
+                {
+                    balance = 0;
+                }
             }
         }
 
-        public int DateCreated
+        /// <summary>
+        /// 
+        /// </summary>
+        public string DateCreated
         {
-            get => default;
+            get { return dateCreated; }
             set
             {
+                if (value != null)
+                {
+                    dateCreated = value;
+                }
+                else
+                {
+                    dateCreated = "Missing";
+                }
             }
         }
 
@@ -50,14 +99,35 @@ namespace AccountApp
             }
         }
 
+        #endregion
+
+        #region Utility methods
+
         public void Deposit()
         {
             throw new System.NotImplementedException();
         }
 
-        public void Withdraw()
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns>
+        /// </returns>
+        public decimal Withdraw(decimal amount)
         {
-            throw new System.NotImplementedException();
+            if (amount > 0 && amount <= balance)
+            {
+                balance -= amount;
+            }
+
+            return balance;
+        }
+        #endregion
+
+        public override string ToString()
+        {
+            return string.Format("Account:\nBalance: {0}, ID: {1} \n ", balance, id);
+
         }
     }
 }
