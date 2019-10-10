@@ -9,6 +9,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Calculator", "Calculator\Ca
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AccountApp", "AccountApp\AccountApp.csproj", "{E2E22F84-A103-4F8E-867A-00FED345DD08}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GradeBook", "..\..\..\Week_2\fig04_12_13\GradeBook\GradeBook.csproj", "{2E1738D9-0F21-4628-B838-49C71B02EA88}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Invoice", "Invoice\Invoice.csproj", "{52F635E3-68E9-44A1-9C36-6F661A01D37F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +31,14 @@ Global
 		{E2E22F84-A103-4F8E-867A-00FED345DD08}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E2E22F84-A103-4F8E-867A-00FED345DD08}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E2E22F84-A103-4F8E-867A-00FED345DD08}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2E1738D9-0F21-4628-B838-49C71B02EA88}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2E1738D9-0F21-4628-B838-49C71B02EA88}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2E1738D9-0F21-4628-B838-49C71B02EA88}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2E1738D9-0F21-4628-B838-49C71B02EA88}.Release|Any CPU.Build.0 = Release|Any CPU
+		{52F635E3-68E9-44A1-9C36-6F661A01D37F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{52F635E3-68E9-44A1-9C36-6F661A01D37F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{52F635E3-68E9-44A1-9C36-6F661A01D37F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{52F635E3-68E9-44A1-9C36-6F661A01D37F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

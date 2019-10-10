@@ -8,7 +8,7 @@
     </TypeIdentifier>
   </Class>
   <Class Name="AccountApp.Time">
-    <Position X="3" Y="2.5" Width="1.5" />
+    <Position X="5.5" Y="2" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAgAAAAIAAAAAACIAAAAiAAAAAAA=</HashCode>
       <FileName>Time.cs</FileName>
