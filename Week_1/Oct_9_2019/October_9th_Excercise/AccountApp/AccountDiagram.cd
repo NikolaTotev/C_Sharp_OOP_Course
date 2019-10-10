@@ -3,8 +3,15 @@
   <Class Name="AccountApp.Account">
     <Position X="7.25" Y="2" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAACAAQAAAAAAAAAAAgAAAAMAAAAAAQAAAAEAAAAAkI=</HashCode>
+      <HashCode>AAACAAQAAAAAAAAEAAgAAAAMAAAAAAQAAAAEAAAAAkI=</HashCode>
       <FileName>Account.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AccountApp.Time">
+    <Position X="3" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAgAAAAIAAAAAACIAAAAiAAAAAAA=</HashCode>
+      <FileName>Time.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Font Name="Segoe UI" Size="9" />
