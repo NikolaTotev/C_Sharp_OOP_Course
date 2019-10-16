@@ -10,7 +10,7 @@
     <!-- !! Ask if there is a way to declare a variable to be used in place of margin -->
 
     <StackPanel>
-        <TextBox Text="0" Margin="20" TextAlignment="Right"/>
+        <TextBox Text="0" Margin="20" x:Name="TxtInput" TextAlignment="Right"/>
         <Grid>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="3*"/>
@@ -33,20 +33,20 @@
                     </Grid.RowDefinitions>
 
                     <!-- First Row -->
-                    <Button Margin="4" Grid.Column="0" Grid.Row="0" x:Name="btn1" Content="1"/>
-                    <Button Margin="4" Grid.Column="1" Grid.Row="0" x:Name="btn2" Content="2"/>
-                    <Button Margin="4" Grid.Column="2" Grid.Row="0" x:Name="btn3" Content="3"/>
+                    <Button Margin="4" Grid.Column="0" Grid.Row="0" x:Name="Btn1" Content="1" Click="NumberBtn_OnClick"/>
+                    <Button Margin="4" Grid.Column="1" Grid.Row="0" x:Name="Btn2" Content="2" Click="NumberBtn_OnClick"/>
+                    <Button Margin="4" Grid.Column="2" Grid.Row="0" x:Name="Btn3" Content="3" Click="NumberBtn_OnClick"/>
 
                     <!-- Second Row -->
-                    <Button Margin="4" Grid.Column="0" Grid.Row="1" x:Name="btn4" Content="4"/>
-                    <Button Margin="4" Grid.Column="1" Grid.Row="1" x:Name="btn5" Content="5"/>
-                    <Button Margin="4" Grid.Column="2" Grid.Row="1" x:Name="btn6" Content="6"/>
+                    <Button Margin="4" Grid.Column="0" Grid.Row="1" x:Name="Btn4" Content="4" Click="NumberBtn_OnClick"/>
+                    <Button Margin="4" Grid.Column="1" Grid.Row="1" x:Name="Btn5" Content="5" Click="NumberBtn_OnClick"/>
+                    <Button Margin="4" Grid.Column="2" Grid.Row="1" x:Name="Btn6" Content="6" Click="NumberBtn_OnClick"/>
 
 
                     <!-- Third Row -->
-                    <Button Margin="4" Grid.Column="0" Grid.Row="2" x:Name="btn7" Content="7"/>
-                    <Button Margin="4" Grid.Column="1" Grid.Row="2" x:Name="btn8" Content="8"/>
-                    <Button Margin="4" Grid.Column="2" Grid.Row="2" x:Name="btn9" Content="9"/>
+                    <Button Margin="4" Grid.Column="0" Grid.Row="2" x:Name="Btn7" Content="7" Click="NumberBtn_OnClick"/>
+                    <Button Margin="4" Grid.Column="1" Grid.Row="2" x:Name="Btn8" Content="8" Click="NumberBtn_OnClick"/>
+                    <Button Margin="4" Grid.Column="2" Grid.Row="2" x:Name="Btn9" Content="9" Click="NumberBtn_OnClick"/>
 
                 </Grid>
 
@@ -56,8 +56,8 @@
                         <ColumnDefinition Width="*"/>
                         <ColumnDefinition Width="2*"/>
                     </Grid.ColumnDefinitions>
-                    <Button Margin="4" Grid.Column="0"  x:Name="btn0" Content="0"/>
-                    <Button Margin="4" Grid.Column="1"  x:Name="btn00" Content="00"/>
+                    <Button Margin="4" Grid.Column="0"  x:Name="Btn0" Content="0" Click="NumberBtn_OnClick"/>
+                    <Button Margin="4" Grid.Column="1"  x:Name="Btn00" Content="00" Click="NumberBtn_OnClick"/>
 
                 </Grid>
             </StackPanel>
@@ -78,8 +78,8 @@
                             <RowDefinition Height="3*"/>
                             <RowDefinition Height="*"/>
                         </Grid.RowDefinitions>
-                        <Button Margin="4" Content="+" Grid.Row="0"/>
-                        <Button Margin="4" Content="." Grid.Row="1"/>
+                        <Button Margin="4" x:Name="BtnPlus" Content="+" Grid.Row="0" Click="Btn_OperationClick"/>
+                        <Button Margin="4" x:Name="BtnDot" Content="." Grid.Row="1" Click="Btn_OperationClick"/>
                     </Grid>
 
                     <!-- Column 2 -->
@@ -90,10 +90,10 @@
                             <RowDefinition Height="*"/>
                             <RowDefinition Height="*"/>
                         </Grid.RowDefinitions>
-                        <Button Margin="4" Content="x" Grid.Row="1"/>
-                        <Button Margin="4" Content="-" Grid.Row="0"/>
-                        <Button Margin="4" Content="/" Grid.Row="2"/>
-                        <Button Margin="4" Content="=" Grid.Row="3"/>
+                        <Button Margin="4" x:Name="BtnMultip" Content="x" Grid.Row="1" Click="Btn_OperationClick"/>
+                        <Button Margin="4" x:Name="BtnSubtract" Content="-" Grid.Row="0" Click="Btn_OperationClick"/>
+                        <Button Margin="4" x:Name="BtnDivide" Content="/" Grid.Row="2" Click="Btn_OperationClick"/>
+                        <Button Margin="4" x:Name="BtnEqual" Content="=" Grid.Row="3" Click="Btn_ComputeClick"/>
                     </Grid>
                 </Grid>
             </StackPanel>
@@ -105,8 +105,8 @@
                         <RowDefinition Height="*"/>
                         <RowDefinition Height="*"/>
                     </Grid.RowDefinitions>
-                    <Button Margin="4" Content="C" Grid.Row="0"/>
-                    <Button Margin="4" Content="C/A" Grid.Row="1"/>
+                    <Button Margin="4" x:Name="BtnC" Content="C" Grid.Row="0" Click="Btn_ClearLast"/>
+                    <Button Margin="4" x:Name="ClearAl" Content="C/A" Grid.Row="1" Click="Btn_ClearAll"/>
                 </Grid>
 
                 <Button Margin="0 25 0 0" Content="OFF"/>
