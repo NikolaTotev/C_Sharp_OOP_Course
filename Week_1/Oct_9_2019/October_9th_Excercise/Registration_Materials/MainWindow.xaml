@@ -141,7 +141,7 @@
                 <TextBlock Margin="0 15 0 15" Text="Additional Info" FontWeight="Bold"/>
                 <TextBlock Text="Note"/>
                 <TextBox 
-                    Height="150"
+                    Height="94"
                     ScrollViewer.HorizontalScrollBarVisibility="Auto" 
                     ScrollViewer.CanContentScroll="True" 
                     ScrollViewer.VerticalScrollBarVisibility="Visible" 

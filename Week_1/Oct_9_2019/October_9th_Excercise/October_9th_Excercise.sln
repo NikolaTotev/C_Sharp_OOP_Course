@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GradeBook", "..\..\..\Week_
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Invoice", "Invoice\Invoice.csproj", "{52F635E3-68E9-44A1-9C36-6F661A01D37F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mystery2_Problem4_Lab2", "Mystery2_Problem4_Lab2\Mystery2_Problem4_Lab2.csproj", "{EA188E9F-609E-4A8D-A1CF-BCD469078FAA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{52F635E3-68E9-44A1-9C36-6F661A01D37F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{52F635E3-68E9-44A1-9C36-6F661A01D37F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{52F635E3-68E9-44A1-9C36-6F661A01D37F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EA188E9F-609E-4A8D-A1CF-BCD469078FAA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EA188E9F-609E-4A8D-A1CF-BCD469078FAA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EA188E9F-609E-4A8D-A1CF-BCD469078FAA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EA188E9F-609E-4A8D-A1CF-BCD469078FAA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

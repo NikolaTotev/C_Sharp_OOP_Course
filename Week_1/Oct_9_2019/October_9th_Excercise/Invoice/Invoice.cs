@@ -17,6 +17,10 @@ namespace Invoice
             get => default;
             set
             {
+                if (value != null)
+                {
+                    partDescription = value;
+                }
             }
         }
 
@@ -25,6 +29,10 @@ namespace Invoice
             get => default;
             set
             {
+                if (value != null)
+                {
+                    partNumber = value;
+                }
             }
         }
 
@@ -33,6 +41,10 @@ namespace Invoice
             get => default;
             set
             {
+                if (value != null)
+                {
+                    pricePerItem = value;
+                }
             }
         }
 
@@ -41,6 +53,10 @@ namespace Invoice
             get => default;
             set
             {
+                if (value != null)
+                {
+                    quantity = value;
+                }
             }
         }
 
