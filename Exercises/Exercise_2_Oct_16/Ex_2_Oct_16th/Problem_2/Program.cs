@@ -18,10 +18,10 @@ namespace Problem_2
             int sign;
             //initialization;
             Console.WriteLine("Enter accuracy");
-            eps = Convert.ToDouble(Console.Read());
+            eps = Convert.ToDouble(Console.ReadLine());
 
             Console.WriteLine("Enter x");
-            x = Convert.ToDouble(Console.Read());
+            x = Convert.ToDouble(Console.ReadLine());
 
             term = 1;
             sum = term;
@@ -29,11 +29,12 @@ namespace Problem_2
             sign = -1;
             do
             {
-                term = term*x/(2 * counter*(2*counter-1));
+                term = term*x*x/(2 * counter*(2*counter-1));
                 sum += term;
                 sign = -sign;
                 counter++;
-                term = (term >= 0) ? term :  -term;
+                term = (term >= 0) ? term : -term;
+
             }
 
             while (term>eps);
