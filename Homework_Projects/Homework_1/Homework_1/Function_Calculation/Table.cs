@@ -16,41 +16,48 @@ namespace Function_Calculation
 
         #endregion
 
+        #region Constructor
         /// <summary>
         /// Constructor, initializes all fields with default values.
         /// startValue = 0;
         /// endValue = 5;
         /// stepSize = 1;
         /// </summary>
-        public Table(double startValue = 0, double endValue = 5, double stepSize = 1) //Constructor start;
+        public Table(double startValue = 0, double endValue = 5, double stepSize = 1)
         {
-            StartValue = startValue;//Init startValue;
-            EndValue = endValue;//Init endValue;
-            StepSize = stepSize;//Init stepSize;
+            StartValue = startValue;
+            EndValue = endValue;
+            StepSize = stepSize;
         }
+
+        #endregion
+
         #region Properties
-        public double EndValue //EndValue property begin;
+        public double EndValue 
         {
             get => endValue;
             set => endValue = value;
-        }//EndValue property end;
+        }
 
-        public double StartValue//StartValue property begin;
+        public double StartValue
         {
             get => startValue;
             set => startValue = value;
-        }//StartValue property end;
+        }
 
-        public double StepSize//StepSize property being;
+        public double StepSize
         {
 
             get => stepSize;
             set => stepSize = value;
-        }//StepSize property end;
+        }
 
         #endregion
 
-        public void MakeTable() //Make table method begin;
+        /// <summary>
+        /// Make table method. Contains the algorithm that tabulates the results of the function.
+        /// </summary>
+        public void MakeTable() 
         {
             Console.WriteLine("Input value    Output value");
             int outputCounter = 0;
@@ -74,6 +81,6 @@ namespace Function_Calculation
                 Console.WriteLine("{0, 4}{1,15}", i, functionValue);
 
             }
-        }//Make table method end;
+        }
     }
 }

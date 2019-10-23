@@ -11,9 +11,12 @@ namespace Function_Calculation
         private double inputEndValue;
         private double inputStepSize;
 
+        #region Constructor
+
+        //Constructor
         public TableTest()
         {
-            
+
             Console.WriteLine("Please input the following values:");
             try
             {
@@ -31,14 +34,16 @@ namespace Function_Calculation
                 Console.WriteLine("Invalid input!");
                 Console.WriteLine("Aborting execution.");
                 throw;
-                return;
             }
-            
 
-            
+
+
 
             MakeTable();
-        }
+        } 
+        #endregion
+
+        #region Properties
         public double InputEndValue
         {
             get => inputEndValue;
@@ -74,6 +79,7 @@ namespace Function_Calculation
                 }
             }
         }
+        #endregion
 
         public void MakeTable()
         {
@@ -87,4 +93,4 @@ namespace Function_Calculation
             newTable.MakeTable();
         }
     }
-}  
+}
