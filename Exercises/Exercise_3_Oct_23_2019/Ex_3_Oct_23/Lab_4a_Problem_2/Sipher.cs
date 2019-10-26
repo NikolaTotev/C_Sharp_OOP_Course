@@ -1,15 +1,15 @@
 ﻿using System;
-using System.CodeDom;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Lab_4a_Problem_2
+namespace TrasnpositionCipher
 {
-    public class Sipher
+    public class Cipher
     {
         private int cipherKey;
+
         public int CipherKey
         {
             get { return cipherKey; }
@@ -19,111 +19,105 @@ namespace Lab_4a_Problem_2
                 {
                     cipherKey = value;
                 }
-                else
-                {
-                    cipherKey = 1;
-                }
+                else cipherKey = 1;
             }
         }
 
-        public Sipher(int cipherKey)
+        public Cipher(int cipherKey)
         {
             CipherKey = cipherKey;
         }
 
         /// <summary>
-        /// Encrypts plaintext with Transposition cipher
+        /// Encrypts with Transposition Cipher
         /// </summary>
         /// <param name="plaintext"></param>
-        /// <returns>Encrypted text</returns>
+        /// <returns>
+        /// Encrypted text
+        /// </returns>
         public string Encrypt(string plaintext)
         {
-            string ciphertext = "";
-            char[] plainTextChars = plaintext.ToCharArray();
-            if (plainTextChars.Length <= cipherKey)
-            {
-                return "Can't encrypt. Text too short!";
-            }
+            char[] plaintextChars = plaintext.ToCharArray();
+            if (plaintextChars.Length <= cipherKey) return "Cannot encrypt. Text is too short!";
 
-            int rows = plainTextChars.Length / cipherKey + 1;
+            int rows = plaintextChars.Length / cipherKey + 1;
             int cols = cipherKey;
-            char[] cipherTextChars = new char[rows * cipherKey];
-            char[,] codeTable = new char[rows, cols]; // write by rows read by columns
+            char[] ciphertextChars = new char[rows * cipherKey];
+            int countChars;
 
-            int countChars = 0;
-            for (int i = 0; i < cipherTextChars.GetLength(0); i++)
+            //write by rows, read by cols
+            char[,] codeTable = new char[rows, cols];
+
+            //write by rows
+            countChars = 0;//no chars read
+            for (int i = 0; i < codeTable.GetLength(0); i++)
             {
-                for (int j = 0; j < cipherTextChars.GetLength(1); j++)
+                for (int j = 0; j < codeTable.GetLength(1); j++)
                 {
-                    if (countChars < plainTextChars.Length)
+                    if (countChars < plaintextChars.Length)
                     {
-
-                        codeTable[i, j] = plainTextChars[countChars++];
+                        codeTable[i, j] = plaintextChars[countChars++];
                     }
                     else
                     {
                         codeTable[i, j] = ' ';
                     }
                 }
-
-
             }
 
-            countChars = 0;
-            for (int i = 0; i < cipherTextChars.GetLength(0); i++)
+            //read codeTable by cols
+            countChars = 0; // no chars read
+            for (int i = 0; i < codeTable.GetLength(1); i++)
             {
-                for (int j = 0; j < cipherTextChars.GetLength(1); j++)
+                for (int j = 0; j < codeTable.GetLength(0); j++)
                 {
-                    cipherTextChars[countChars++] = codeTable[j, i];
+                    ciphertextChars[countChars++] = codeTable[j, i];
                 }
             }
 
-            return new String(cipherTextChars);
+            return new String(ciphertextChars);//convert to string
         }
 
-        public string Decrypt (string cipherText)
+        public string Decrypt(string ciphertext)
         {
-            string plainText = " ";
+            char[] ciphertextChars = ciphertext.ToCharArray();
 
-            char[] cipherTextChars = cipherText.ToCharArray();
-
-
-
-            int rows = cipherTextChars.Length / cipherKey + 1;
+            int rows = ciphertextChars.Length / cipherKey;
             int cols = cipherKey;
-            char[] plainTextChars = new char[rows * cipherKey];
-            char[,] codeTable = new char[rows, cols]; // write by rows read by columns
+            char[] plaintextChars = new char[rows * cipherKey];
+            int countChars;
 
-            int countChars = 0;
-            for (int i = 0; i < cipherTextChars.GetLength(0); i++)
+            //write by cols, read by rows
+            char[,] codeTable = new char[rows, cols];
+
+            //write by col
+            countChars = 0;//no chars read
+            for (int i = 0; i < codeTable.GetLength(1); i++)
             {
-                for (int j = 0; j < cipherTextChars.GetLength(1); j++)
+                for (int j = 0; j < codeTable.GetLength(0); j++)
                 {
-                    if (countChars < plainTextChars.Length)
+                    if (countChars < ciphertextChars.Length)
                     {
-                        plainTextChars[countChars++] = codeTable[i, j];
+                        codeTable[j, i] = ciphertextChars[countChars++];
                     }
                     else
                     {
-                        codeTable[i, j] = ' ';
+                        codeTable[j, i] = ' ';
                     }
                 }
-
-
             }
 
-            countChars = 0;
-            for (int i = 0; i < cipherTextChars.GetLength(0); i++)
+            //read codeTable by rows
+            countChars = 0; // no chars read
+            for (int i = 0; i < codeTable.GetLength(0); i++)
             {
-                for (int j = 0; j < cipherTextChars.GetLength(1); j++)
+                for (int j = 0; j < codeTable.GetLength(1); j++)
                 {
-                     codeTable[j, i] = cipherTextChars[countChars++];
+                    plaintextChars[countChars++] = codeTable[i, j];
                 }
             }
 
-            return "";
+            return new String(plaintextChars);//convert to string
         }
     }
-
-
 }

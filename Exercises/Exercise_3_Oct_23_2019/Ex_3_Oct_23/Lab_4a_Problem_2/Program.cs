@@ -4,6 +4,7 @@ using System.Linq;
 using System.Security.Authentication;
 using System.Text;
 using System.Threading.Tasks;
+using TrasnpositionCipher;
 
 namespace Lab_4a_Problem_2
 {
@@ -11,9 +12,9 @@ namespace Lab_4a_Problem_2
     {
         static void Main(string[] args)
         {
-            Sipher sp = new Sipher(6);
+            Cipher cp = new Cipher(6);
             string plain = "ttihhnietspeilxsat";
-            string cipher = sp.Encrypt(plain);
+            string cipher = cp.Encrypt(plain);
             Console.WriteLine(cipher);
         }
     }
