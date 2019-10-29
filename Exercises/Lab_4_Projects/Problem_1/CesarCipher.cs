@@ -28,6 +28,8 @@ namespace Problem_1
         {
             Console.WriteLine("Functions available are: \n Encrypt(input String, input offset) " +
                               "\n Decrypt(input string, input offset)");
+            Console.WriteLine();
+
         }
 
         public string Encrypt(string input, int offset)
@@ -50,6 +52,34 @@ namespace Problem_1
                 else
                 {
                     newIndex = letterIndex + offset;
+                }
+                output += (wasLower) ? alphabet[newIndex].ToLower() : alphabet[newIndex];
+                wasLower = false;
+            }
+
+            return output;
+        }
+
+        public string Decrypt(string input, int offset)
+        {
+            string output = "";
+            int letterIndex;
+            int newIndex;
+            bool wasLower = false;
+            foreach (char letter in input)
+            {
+                if (IsLower(letter))
+                {
+                    wasLower = true;
+                }
+                letterIndex = alphabet.IndexOf(letter.ToString().ToUpper());
+                if (letterIndex - offset < 0)
+                {
+                    newIndex = alphabet.Count - (letterIndex + offset);
+                }
+                else
+                {
+                    newIndex = letterIndex - offset;
                 }
                 output += (wasLower) ? alphabet[newIndex].ToLower() : alphabet[newIndex];
                 wasLower = false;
