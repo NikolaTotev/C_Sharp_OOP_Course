@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Linq;
 using System.Collections.Generic;
+using System.Net.Sockets;
 using System.Reflection.Metadata.Ecma335;
 
 namespace Project_1
@@ -25,7 +26,7 @@ namespace Project_1
                 new Invoice(24, "Power saw", 18, 99.99m),
                 new Invoice(7, "Sledge hammer", 11, 21.50m),
                 new Invoice(77, "Hammer", 76, 11.99m),
-                new Invoice(77, "Hammer", 30, 11.99m),
+                new Invoice(77, "Hammer", 30, 12m),
                 new Invoice(39, "Lawn mower", 3, 79.50m),
                 new Invoice(39, "Lawn mower", 6, 79.50m),
                 new Invoice(68, "Screwdriver", 106, 6.99m),
@@ -79,11 +80,44 @@ namespace Project_1
 
             var sortedInRange = from invoice in invoices
                                 let total = invoice.Quantity * invoice.Price
-                                orderby total where total > 200 && total < 500
-                                select (invoice.PartDescription, total);
+                                orderby total
+                                where total > 200 && total < 500
+                                select (Description: invoice.PartDescription, TotalPrice: total);
+            Console.WriteLine("{0, -20}{1,10}", "Description", "Total Price");
+            foreach (var item in sortedInRange)
+            {
+                Console.WriteLine("{0, -20} {1 ,10:C}", item.Description, item.TotalPrice);
+            }
+            Console.WriteLine();
 
-            Display(sortedInRange, "Totals where total between 200 and 500");
 
+            //===================== Grouping 
+
+            var groupInvoices = from invoice in invoices
+                               group invoice by GetGroupName(invoice.Price) into grp
+                               select grp;
+
+            
+
+            Console.WriteLine("List invoices by group");
+            foreach (var invoiceGroup in groupInvoices)
+            {
+                Console.WriteLine("Group: {0}, contains: {1} elements", invoiceGroup.Key, invoiceGroup.Count());
+                foreach (var invoice in invoiceGroup)
+                {
+                    Console.WriteLine(invoice);
+                }
+                Console.WriteLine();
+            }
+        }
+
+        private static string GetGroupName(decimal price)
+        {
+            if (price == 12)
+            {
+                return "Equal to 12";
+            }
+            return price < 12 ? "Price below 12" : "Price above 12";
         }
     }
 }
