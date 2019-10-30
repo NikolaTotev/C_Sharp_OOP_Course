@@ -37,6 +37,10 @@ namespace Lab_5_Problem_3
 
             Console.WriteLine();
 
+            Console.WriteLine("Sorted chars with lambda");
+            
+            Console.WriteLine();
+
         }
     }
 }
