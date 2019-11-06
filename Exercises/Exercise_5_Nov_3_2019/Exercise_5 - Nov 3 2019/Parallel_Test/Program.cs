@@ -44,6 +44,11 @@ class Solution
 
         var newInfo = from trucks in info orderby trucks.offset select trucks;
 
+
+        foreach (var truck in newInfo)
+        {
+        }
+
         longBoi tempMin = 0;
         longBoi currentMin = 0;
         longBoi currentOffset = 0;
