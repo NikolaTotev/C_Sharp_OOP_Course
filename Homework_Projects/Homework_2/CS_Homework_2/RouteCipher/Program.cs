@@ -11,7 +11,7 @@ namespace RouteCipher
         static void Main(string[] args)
         {
 
-            RouteCipher cp = new RouteCipher(5);
+            RouteCipher cp = new RouteCipher(-5);
             Console.WriteLine(cp.Encrypt("abortthemissionyouhavebeenspotted"));
         }
     }
