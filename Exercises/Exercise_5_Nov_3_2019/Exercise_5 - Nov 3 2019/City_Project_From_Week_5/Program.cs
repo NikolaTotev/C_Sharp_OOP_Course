@@ -10,6 +10,8 @@ namespace City_Project_From_Week_5
 {
     class Program
     {
+
+
         static void Main(string[] args)
         {
             City[] cities =

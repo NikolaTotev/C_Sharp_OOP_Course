@@ -45,29 +45,37 @@ class Solution
         var newInfo = from trucks in info orderby trucks.offset select trucks;
 
 
-        foreach (var truck in newInfo)
-        {
-        }
+        //foreach (var truck in newInfo)
+        //{
+        //    Console.WriteLine("offset-{0}, number of monsters-{1}", truck.offset, truck.numberOfDrinksToMove);
+        //}
 
-        longBoi tempMin = 0;
-        longBoi currentMin = 0;
-        longBoi currentOffset = 0;
+        longBoi currentMin = -1;
         bool notFirstIt = false;
 
         Parallel.ForEach(newInfo, (fixedTruck, outerLoopSate) =>
         {
-            Parallel.ForEach(newInfo, (truck, innerLoopSate) =>
+            longBoi currentOffset = -1;
+            longBoi tempMin = -1;
+            foreach (var truckElement in info)
             {
-                if (fixedTruck.offset != truck.offset && fixedTruck.numberOfDrinksToMove != truck.numberOfDrinksToMove)
+                if (fixedTruck.offset != truckElement.offset && fixedTruck.numberOfDrinksToMove != truckElement.numberOfDrinksToMove)
                 {
-                    currentOffset = Math.Abs(truck.offset - fixedTruck.offset);
-                    tempMin += currentOffset * truck.numberOfDrinksToMove;
+                    currentOffset = Math.Abs(truckElement.offset - fixedTruck.offset);
+                    tempMin += currentOffset * truckElement.numberOfDrinksToMove;
                     if (tempMin > currentMin && !notFirstIt)
                     {
-                        innerLoopSate.Break();
+                        break;
                     }
                 }
-            });
+            }
+            //Parallel.ForEach(newInfo, (truck, innerLoopSate) =>
+            //{
+
+
+
+
+            //});
             if (notFirstIt)
             {
                 currentMin = tempMin;
