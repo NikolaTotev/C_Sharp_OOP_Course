@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Linq;
 using System.Collections.Generic;
 using System.Net.Sockets;
@@ -33,12 +34,41 @@ namespace Project_1
                 new Invoice(56, "Jig saw", 21, 11.00m),
                 new Invoice(3, "Wrench", 34, 7.50m)
             };
+
+            List<Invoice> invoiceList = new List<Invoice>()
+            {
+                new Invoice(83, "Electric Sander", 7, 57.98m),
+                new Invoice(24, "Power saw", 18, 99.99m),
+                new Invoice(7, "Sledge hammer", 11, 21.50m),
+                new Invoice(77, "Hammer", 76, 11.99m),
+                new Invoice(77, "Hammer", 30, 12m),
+                new Invoice(39, "Lawn mower", 3, 79.50m),
+                new Invoice(39, "Lawn mower", 6, 79.50m),
+                new Invoice(68, "Screwdriver", 106, 6.99m),
+                new Invoice(56, "Jig saw", 21, 11.00m),
+                new Invoice(3, "Wrench", 34, 7.50m)
+            };
+
             Display(SortByPrice(invoices), "Sort by price with lambda"); //Nov 6
-            Console.WriteLine(); // Nov 6
             Display(SortByDescQuantity(invoices), "Sorted with tuples & lambda"); //Nov 6
+            Display(SortByDescQuantity(invoiceList), "Same as previous but with list"); //Nov 6
+            Display(SortByDescQuantityAsString(invoices), "Sorted with tuples as string"); //Nov 6
+
+            Console.WriteLine("Dislpaying groups");
             Console.WriteLine();
-            Display(SortByDescQuantityAsString(invoices), "Sorted with tuples as string");
+            foreach (var grouping in GroupByPrice(invoices))
+            {
+                Console.WriteLine("Group {0} has {1} elements", grouping.Key, grouping.Count());
+                foreach (var item in grouping)
+                {
+                    Console.WriteLine("{0}", item);
+                }
+
+                Console.WriteLine();
+            }
+                                                
         }
+
 
         //From previous exercise;
         private static void LINQasQuery(Invoice[] invoices)
@@ -147,6 +177,19 @@ namespace Project_1
             return sortedWithTuples;
         }
 
+        /// <summary>
+        /// With list.
+        /// </summary>
+        /// <param name="invoices"></param>
+        /// <returns></returns>
+        public static IEnumerable<(string, int)> SortByDescQuantity(List<Invoice> invoices)
+        {
+            var sortedWithTuples = invoices
+                .OrderByDescending(inv => inv.Quantity)
+                .Select(inv => (inv.PartDescription, inv.Quantity));
+            return sortedWithTuples;
+        }
+
         public static IEnumerable<string> SortByDescQuantityAsString(Invoice[] invoices)
         {
             var sortedWithTuples = invoices
@@ -158,6 +201,16 @@ namespace Project_1
                 string output = string.Format("{0} -> {0}", item.PartDescription, item.Quantity);
                 yield return output;
             }
+        }
+
+        public static IEnumerable<IGrouping<string, Invoice>> GroupByPrice(Invoice[] invoices)
+        {
+            var groupInvoices = invoices
+                .OrderBy(invoice => invoice.PartDescription)
+                .GroupBy(invoice => GetGroupName(invoice.Price));
+
+
+            return groupInvoices;
         }
         ///=========================================================================================================================
     }
