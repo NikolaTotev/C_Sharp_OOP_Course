@@ -59,6 +59,9 @@ namespace Project_1
             foreach (var grouping in GroupByPrice(invoices))
             {
                 Console.WriteLine("Group {0} has {1} elements", grouping.Key, grouping.Count());
+                Console.WriteLine("Invoice average price {0}:", grouping.Average(x=>x.Price));
+                Console.WriteLine("Invoice max price {0}:", grouping.Max(x => x.Price));
+
                 foreach (var item in grouping)
                 {
                     Console.WriteLine("{0}", item);
