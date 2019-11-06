@@ -33,9 +33,11 @@ namespace Project_1
                 new Invoice(56, "Jig saw", 21, 11.00m),
                 new Invoice(3, "Wrench", 34, 7.50m)
             };
-            Display(SortByPrice(invoices), "Sort by price with lambda");
-
-
+            Display(SortByPrice(invoices), "Sort by price with lambda"); //Nov 6
+            Console.WriteLine(); // Nov 6
+            Display(SortByDescQuantity(invoices), "Sorted with tuples & lambda"); //Nov 6
+            Console.WriteLine();
+            Display(SortByDescQuantityAsString(invoices), "Sorted with tuples as string");
         }
 
         //From previous exercise;
@@ -127,8 +129,7 @@ namespace Project_1
             return price < 12 ? "Price below 12" : "Price above 12";
         }
 
-        ///From here its Nov 6th Exercise ========================================================================================
-        //User defined iterator
+        ///From here its Nov 6th Exercise ==========================================================================================
         public static IEnumerable<Invoice> SortByPrice(Invoice[] invoices)
         {
             var sortByPrice = invoices
@@ -137,5 +138,27 @@ namespace Project_1
                 .Select(invoice => invoice);
             return sortByPrice;
         }
+
+        public static IEnumerable<(string, int)> SortByDescQuantity(Invoice[] invoices)
+        {
+            var sortedWithTuples = invoices
+                .OrderByDescending(inv => inv.Quantity)
+                .Select(inv => (inv.PartDescription, inv.Quantity));
+            return sortedWithTuples;
+        }
+
+        public static IEnumerable<string> SortByDescQuantityAsString(Invoice[] invoices)
+        {
+            var sortedWithTuples = invoices
+                .OrderByDescending(inv => inv.Quantity)
+                .Select(inv => new { inv.PartDescription, inv.Quantity });
+
+            foreach (var item in sortedWithTuples)
+            {
+                string output = string.Format("{0} -> {0}", item.PartDescription, item.Quantity);
+                yield return output;
+            }
+        }
+        ///=========================================================================================================================
     }
 }
