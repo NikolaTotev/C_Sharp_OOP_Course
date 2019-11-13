@@ -76,6 +76,11 @@ namespace Project_1
         //From previous exercise;
         private static void LINQasQuery(Invoice[] invoices)
         {
+            ///From here Nov 13 Exercise ====
+            var calculated = invoices.Select(inv => new {Invoice = inv, Total = inv.Price * inv.Quantity})
+                .OrderBy(x => x.Total).Select(x=>(x.Invoice.PartDescription, x.Total));
+            /// 
+
             var sortedByDesc = from invoice in invoices
                                orderby invoice.PartDescription
                                select invoice;
@@ -161,6 +166,8 @@ namespace Project_1
             }
             return price < 12 ? "Price below 12" : "Price above 12";
         }
+
+        
 
         ///From here its Nov 6th Exercise ==========================================================================================
         public static IEnumerable<Invoice> SortByPrice(Invoice[] invoices)
