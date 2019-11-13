@@ -46,7 +46,7 @@ namespace Exercise_6___Nov_13_2019
 
         #region Properties
 
-        public CompareBy Order
+        public CompareBy Order //This remains to be fixed for next time 
         {
             get { return order; }
             set
@@ -54,6 +54,10 @@ namespace Exercise_6___Nov_13_2019
                 if (value != null)
                 {
                     order = value;
+                }
+                else
+                {
+                    order = Area;
                 }
             }
         }

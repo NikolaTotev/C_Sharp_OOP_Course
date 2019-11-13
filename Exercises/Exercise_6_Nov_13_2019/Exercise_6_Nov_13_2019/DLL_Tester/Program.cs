@@ -42,7 +42,7 @@ namespace DLL_Tester
             Console.WriteLine(" Diagonal - {0}", rect.Diagonal());
             Console.WriteLine();
 
-            rect.order = rect.Area;
+            rect.Order = rect.Area;
 
             List<Rectangle> rectangles = new List<Rectangle>(){rect, rect2};
 
