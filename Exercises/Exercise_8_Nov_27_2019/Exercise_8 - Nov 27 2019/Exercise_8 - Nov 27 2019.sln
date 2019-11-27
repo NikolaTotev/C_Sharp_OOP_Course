@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29009.5
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Digital_Clock", "Digital_Clock\Digital_Clock.csproj", "{4D6F1F94-7BCD-46B1-887C-516A2CFCEBDC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lab_9b_Problem_2", "Lab_9b_Problem_2\Lab_9b_Problem_2.csproj", "{23328CF8-8BAB-4DFD-98E6-DE66AF944DCE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4D6F1F94-7BCD-46B1-887C-516A2CFCEBDC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4D6F1F94-7BCD-46B1-887C-516A2CFCEBDC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4D6F1F94-7BCD-46B1-887C-516A2CFCEBDC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4D6F1F94-7BCD-46B1-887C-516A2CFCEBDC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{23328CF8-8BAB-4DFD-98E6-DE66AF944DCE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{23328CF8-8BAB-4DFD-98E6-DE66AF944DCE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{23328CF8-8BAB-4DFD-98E6-DE66AF944DCE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{23328CF8-8BAB-4DFD-98E6-DE66AF944DCE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {67502881-359F-4004-BF0B-1C4B005C5124}
+	EndGlobalSection
+EndGlobal
