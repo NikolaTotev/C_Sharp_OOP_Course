@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Digital_Clock", "Digital_Cl
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lab_9b_Problem_2", "Lab_9b_Problem_2\Lab_9b_Problem_2.csproj", "{23328CF8-8BAB-4DFD-98E6-DE66AF944DCE}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lab_9b_Problem_1", "Lab_9b_Problem_1\Lab_9b_Problem_1.csproj", "{AAD12B03-4493-405E-B9D2-0EFFF9290C84}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{23328CF8-8BAB-4DFD-98E6-DE66AF944DCE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{23328CF8-8BAB-4DFD-98E6-DE66AF944DCE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{23328CF8-8BAB-4DFD-98E6-DE66AF944DCE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AAD12B03-4493-405E-B9D2-0EFFF9290C84}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AAD12B03-4493-405E-B9D2-0EFFF9290C84}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AAD12B03-4493-405E-B9D2-0EFFF9290C84}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AAD12B03-4493-405E-B9D2-0EFFF9290C84}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
