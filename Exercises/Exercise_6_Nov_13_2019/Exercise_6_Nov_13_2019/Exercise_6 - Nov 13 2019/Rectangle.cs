@@ -37,10 +37,10 @@ namespace Exercise_6___Nov_13_2019
         }
 
         ////Why are these showing up as never used.
-        //public Rectangle(Rectangle rect) : this(rect.Width, rect.length, rect.upperLeftPoint)
-        //{
+        public Rectangle(Rectangle rect) : this(rect.Width, rect.length, rect.upperLeftPoint)
+        {
 
-        //}
+        }
 
         #endregion
 
