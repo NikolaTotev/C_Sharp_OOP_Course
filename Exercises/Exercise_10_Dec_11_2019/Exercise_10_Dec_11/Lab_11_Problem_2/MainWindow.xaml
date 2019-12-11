@@ -1,0 +1,31 @@
+﻿<Window x:Class="Lab_11_Problem_2.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Lab_11_Problem_2"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="357.736">
+    <Window.Resources>
+        <local:ValueConverter x:Key="ConverterKey"/>
+        <Style x:Key ="TxtStyle" TargetType="{x:Type TextBlock}">
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="FontSize" Value="10"/>
+            <Setter Property="FontFamily" Value="Montserrat"/>
+            <Setter Property="Margin" Value="5,10,10,10"/>
+        </Style>
+        <Style x:Key ="TxtBox" TargetType="{x:Type TextBox}">
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="FontSize" Value="10"/>
+            <Setter Property="FontFamily" Value="Montserrat"/>
+            <Setter Property="Margin" Value="5,10,10,10"/>
+        </Style>
+    </Window.Resources>
+    <StackPanel>
+        <TextBlock Text="Bind with XAML" Style="{DynamicResource TxtStyle}"/>
+        <TextBox Name="TxtXamlBind" Style="{DynamicResource TxtBox}" Text="{Binding ElementName=SlrValue, Path=Value, UpdateSourceTrigger=PropertyChanged, Converter={StaticResource ConverterKey}}"/>
+        <TextBlock Text="Bind with Code" Style="{DynamicResource TxtStyle}"/>
+        <TextBox Name="TxtBindWithCode" Style="{DynamicResource TxtBox}"/>
+        <Slider x:Name="SlrValue" Value="1" Maximum="10" TickPlacement="TopLeft" Margin="10,10,10,10"  Foreground="Orange" />
+    </StackPanel>
+</Window>
