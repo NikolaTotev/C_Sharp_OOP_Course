@@ -1,0 +1,41 @@
+﻿<UserControl x:Class="Lab11Prob1ClassLibrary.StorageUI"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Lab11Prob1ClassLibrary"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <UserControl.Resources>
+
+    </UserControl.Resources>
+    <Grid Margin="0,0,-99,30" x:Name="GrdMain">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="2*"/>
+        </Grid.ColumnDefinitions>
+        
+        <Label Content="Student ID" HorizontalAlignment="Stretch" Margin="0,10,0,0" VerticalAlignment="Top" Height="64" Foreground="White" FontWeight="Bold" FontSize="20"/>
+        <TextBox Grid.Row="0" Grid.Column="1" x:Name="txtID" Margin="10,10,10,10"/>
+        
+        <Label Content="First Name" Grid.Row="1" HorizontalAlignment="Stretch" Margin="0,10,0,0" VerticalAlignment="Top" Height="64" Foreground="White" FontWeight="Bold" FontSize="20"/>
+        <TextBox Grid.Row="1" Grid.Column="1" x:Name="txtFirstName" Margin="10,10,10,10"/>
+       
+        <Label Content="Last Name" Grid.Row="2" HorizontalAlignment="Stretch" Margin="0,10,0,0" VerticalAlignment="Top" Height="64" Foreground="White" FontWeight="Bold" FontSize="20"/>
+        <TextBox Grid.Row="2" Grid.Column="1" x:Name="txtLastName" Margin="10,10,10,10"/>
+  
+        <Label Content="Course Name" Grid.Row="3" HorizontalAlignment="Stretch" Margin="0,10,0,0" VerticalAlignment="Top" Height="64" Foreground="White" FontWeight="Bold" FontSize="20"/>
+        <TextBox Grid.Row="3" Grid.Column="1" x:Name="txtCourseName" Margin="10,10,10,10"/>
+
+        <Label Content="Grade" Grid.Row="4" HorizontalAlignment="Stretch" Margin="0,10,0,0" VerticalAlignment="Top" Height="64" Foreground="White" FontWeight="Bold" FontSize="20"/>
+        <TextBox Grid.Row="4" Grid.Column="1" x:Name="txtGrade" Margin="10,10,10,10"/>
+
+    </Grid>
+</UserControl>
