@@ -13,8 +13,7 @@ namespace BackendLogic
 
         public HeavyElement()
         {
-            Random r = new Random();
-            Weight = r.Next(10000);
+            
         }
 
         public HeavyElement(double weight)

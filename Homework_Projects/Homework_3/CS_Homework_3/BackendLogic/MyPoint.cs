@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace BackendLogic
 {
-    public class MyPoint:HeavyElement
+    public class MyPoint : HeavyElement
     {
         public double CoordX { get; set; }
-        public double CoordY{ get; set; }
+        public double CoordY { get; set; }
 
         /// <summary>
         /// Default constructor/
@@ -18,6 +18,7 @@ namespace BackendLogic
         {
             CoordX = 0;
             CoordY = 0;
+
         }
 
         /// <summary>
@@ -25,10 +26,11 @@ namespace BackendLogic
         /// </summary>
         /// <param name="coordY"></param>
         /// <param name="coordX"></param>
-        public MyPoint(double coordY, double coordX)
+        public MyPoint(double coordY, double coordX, double weight = 0)
         {
             CoordX = coordX;
             CoordY = coordY;
+            Weight = weight;
         }
 
         /// <summary>

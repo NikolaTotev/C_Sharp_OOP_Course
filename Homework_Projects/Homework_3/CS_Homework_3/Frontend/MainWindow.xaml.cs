@@ -25,11 +25,13 @@ namespace Frontend
         public MainWindow()
         {
             InitializeComponent();
-            MyPoint pointA = new MyPoint(1, 5);
-            MyPoint pointB = new MyPoint(10, 24);
+            Random r = new Random();
+            
+            MyPoint pointA = new MyPoint(1, 5,r.Next(10000));
+            MyPoint pointB = new MyPoint(10, 24, r.Next(10000));
 
-            Line myLineA = new Line(1, 3, 5, 2);
-            Line myLineB = new Line(1, 3, 5, 2);
+            Line myLineA = new Line(1, 3, 5, 2, r.Next(10000));
+            Line myLineB = new Line(1, 3, 5, 2,r.Next(10000));
 
             HeavyElementArray = new HeavyElement[4]
             {
@@ -84,12 +86,12 @@ namespace Frontend
             string PointItems = "";
             foreach (var heavyElement in HeavyElementArray)
             {
-                if (heavyElement is Point)
+                if (heavyElement is MyPoint)
                 {
                     PointItems+= $" {heavyElement.Weight}";
                 }
             }
-            TbLineArea.Text = string.Format("Current index: {0}, PointItems: {1}", m_CurrentIndex, PointItems);
+            TbPointArea.Text = string.Format("Current index: {0}, PointItems: {1}", m_CurrentIndex, PointItems);
             ChangeIndex();
         }
 

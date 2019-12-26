@@ -14,14 +14,17 @@ namespace BackendLogic
         public Line()
         {
             SMyPoint = new MyPoint(CoordX, CoordY);
+            Random r = new Random();
+            Weight = r.Next(10000);
         }
 
-        public Line(double sCoordX, double sCoordY, double eCoordX, double eCoordY)
+        public Line(double sCoordX, double sCoordY, double eCoordX, double eCoordY, double weight)
         {
             CoordX = sCoordX;
             CoordY = sCoordY;
             SMyPoint = new MyPoint(CoordX, CoordY);
             EMyPoint = new MyPoint(eCoordX, eCoordY);
+            Weight = weight;
         }
 
         public Line(Line previousLine)
