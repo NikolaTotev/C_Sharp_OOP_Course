@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -14,7 +15,7 @@ namespace SortedListSample
             // Create a new sorted list of strings, with string
             // keys.
             SortedList<string, string> openWith =
-                new SortedList<string, string>(Comparer<string>.Create((k1,k2)=>-k1.CompareTo(k2)));
+                new SortedList<string, string>(Comparer<string>.Create((k1, k2) => -k1.CompareTo(k2)));
 
             // Add some elements to the list. There are no 
             // duplicate keys, but some of the values are duplicates.
@@ -131,6 +132,16 @@ namespace SortedListSample
             if (!openWith.ContainsKey("doc"))
             {
                 Console.WriteLine("Key \"doc\" is not found.");
+            }
+
+            //Sort sorted list by value;
+            List<KeyValuePair<string, string>> myList = openWith.ToList();
+            myList.Sort((kp1, kp2) => kp1.Value.CompareTo(kp2.Value));
+
+            Console.WriteLine("Sorted sorted list by values.");
+            foreach (var keyValuePair in myList)
+            {
+                Console.WriteLine("Value:{0}, Key:{1}", keyValuePair.Value, keyValuePair.Key);
             }
         }
     }
