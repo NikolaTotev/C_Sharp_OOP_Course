@@ -6,28 +6,28 @@ using System.Threading.Tasks;
 
 namespace BackendLogic
 {
-    class Line:Point
+    public class Line:MyPoint
     {
-        public Point sPoint { get; set; }
-        public Point ePoint { get; set; }
+        public MyPoint SMyPoint { get; set; }
+        public MyPoint EMyPoint { get; set; }
 
         public Line()
         {
-            sPoint = new Point(CoordX, CoordY);
+            SMyPoint = new MyPoint(CoordX, CoordY);
         }
 
         public Line(double sCoordX, double sCoordY, double eCoordX, double eCoordY)
         {
             CoordX = sCoordX;
             CoordY = sCoordY;
-            sPoint = new Point(CoordX, CoordY);
-            ePoint = new Point(eCoordX, eCoordY);
+            SMyPoint = new MyPoint(CoordX, CoordY);
+            EMyPoint = new MyPoint(eCoordX, eCoordY);
         }
 
         public Line(Line previousLine)
         {
-            sPoint = previousLine.sPoint;
-            ePoint = previousLine.ePoint;
+            SMyPoint = previousLine.SMyPoint;
+            EMyPoint = previousLine.EMyPoint;
         }
     }
 }

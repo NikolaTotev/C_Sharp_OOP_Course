@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BackendLogic
 {
-    class Point:HeavyElement
+    public class MyPoint:HeavyElement
     {
         public double CoordX { get; set; }
         public double CoordY{ get; set; }
@@ -14,7 +14,7 @@ namespace BackendLogic
         /// <summary>
         /// Default constructor/
         /// </summary>
-        public Point()
+        public MyPoint()
         {
             CoordX = 0;
             CoordY = 0;
@@ -25,7 +25,7 @@ namespace BackendLogic
         /// </summary>
         /// <param name="coordY"></param>
         /// <param name="coordX"></param>
-        public Point(double coordY, double coordX)
+        public MyPoint(double coordY, double coordX)
         {
             CoordX = coordX;
             CoordY = coordY;
@@ -34,11 +34,11 @@ namespace BackendLogic
         /// <summary>
         /// Copy constructor.
         /// </summary>
-        /// <param name="previousPoint"></param>
-        public Point(Point previousPoint)
+        /// <param name="previousMyPoint"></param>
+        public MyPoint(MyPoint previousMyPoint)
         {
-            CoordX = previousPoint.CoordX;
-            CoordY = previousPoint.CoordY;
+            CoordX = previousMyPoint.CoordX;
+            CoordY = previousMyPoint.CoordY;
         }
 
         public override double CalcWeight()
