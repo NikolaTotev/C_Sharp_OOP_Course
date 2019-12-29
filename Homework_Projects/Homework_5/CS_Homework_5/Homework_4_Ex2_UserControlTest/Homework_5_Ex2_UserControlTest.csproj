@@ -95,9 +95,9 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Homework_4_Ex2_UserControl\Homework_4_Ex2_UserControl.csproj">
+    <ProjectReference Include="..\Homework_4_Ex2_UserControl\Homework_5_Ex2_UserControl.csproj">
       <Project>{9a5b7125-b5ed-45b4-a581-674f8dcf2f64}</Project>
-      <Name>Homework_4_Ex2_UserControl</Name>
+      <Name>Homework_5_Ex2_UserControl</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

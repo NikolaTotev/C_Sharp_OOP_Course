@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29009.5
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Homework_4_Ex1", "CommandReverse\Homework_4_Ex1.csproj", "{7443D983-D4B1-4EF2-9D3B-D18B6CC057B6}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Homework_5_Ex1", "CommandReverse\Homework_5_Ex1.csproj", "{7443D983-D4B1-4EF2-9D3B-D18B6CC057B6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Homework_4_Ex2_UserControl", "Homework_4_Ex2_UserControl\Homework_4_Ex2_UserControl.csproj", "{9A5B7125-B5ED-45B4-A581-674F8DCF2F64}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Homework_5_Ex2_UserControl", "Homework_4_Ex2_UserControl\Homework_5_Ex2_UserControl.csproj", "{9A5B7125-B5ED-45B4-A581-674F8DCF2F64}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Homework_4_Ex2_UserControlTest", "Homework_4_Ex2_UserControlTest\Homework_4_Ex2_UserControlTest.csproj", "{F0085D7B-B823-49EA-A252-92D9F0C4DB5B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Homework_5_Ex2_UserControlTest", "Homework_4_Ex2_UserControlTest\Homework_5_Ex2_UserControlTest.csproj", "{F0085D7B-B823-49EA-A252-92D9F0C4DB5B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
