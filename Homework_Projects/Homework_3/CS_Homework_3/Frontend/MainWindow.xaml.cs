@@ -69,29 +69,29 @@ namespace Frontend
         private void BtnLines_OnClick(object sender, RoutedEventArgs e)
         {
           
-            string LineItems = "";
+            string lineItems = "";
             foreach (var heavyElement in HeavyElementArray)
             {
                 if (heavyElement is Line)
                 {
-                    LineItems+= $" {heavyElement.Weight}";
+                    lineItems+= $" {heavyElement.Weight}";
                 }
             }
-            TbLineArea.Text = string.Format("Current index: {0}, PointItems: {1}", m_CurrentIndex, LineItems);
+            TbLineArea.Text = $"Current index: {m_CurrentIndex}, PointItems: {lineItems}";
             ChangeIndex();
         }
 
         private void BtnPoints_OnClick(object sender, RoutedEventArgs e)
         {
-            string PointItems = "";
+            string pointItems = "";
             foreach (var heavyElement in HeavyElementArray)
             {
                 if (heavyElement is MyPoint)
                 {
-                    PointItems+= $" {heavyElement.Weight}";
+                    pointItems+= $" {heavyElement.Weight}";
                 }
             }
-            TbPointArea.Text = string.Format("Current index: {0}, PointItems: {1}", m_CurrentIndex, PointItems);
+            TbPointArea.Text = $"Current index: {m_CurrentIndex}, PointItems: {pointItems}";
             ChangeIndex();
         }
 
