@@ -58,7 +58,7 @@ namespace CommandReverse
                 return;
             }
 
-            txtBox.Background = Brushes.IndianRed;+
+            txtBox.Background = Brushes.IndianRed;
 
         }
     }
