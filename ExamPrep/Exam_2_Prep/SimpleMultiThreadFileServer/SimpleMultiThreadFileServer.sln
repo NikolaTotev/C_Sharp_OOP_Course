@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29009.5
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleMultiThreadFileServer", "SimpleMultiThreadFileServer\SimpleMultiThreadFileServer.csproj", "{FBE8A0E7-0DBF-4B60-9739-D2C23A5776F5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleClient", "SimpleClient\SimpleClient.csproj", "{F7A177E8-95EC-43B8-A22A-6680F423BDBB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FBE8A0E7-0DBF-4B60-9739-D2C23A5776F5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FBE8A0E7-0DBF-4B60-9739-D2C23A5776F5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FBE8A0E7-0DBF-4B60-9739-D2C23A5776F5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FBE8A0E7-0DBF-4B60-9739-D2C23A5776F5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F7A177E8-95EC-43B8-A22A-6680F423BDBB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F7A177E8-95EC-43B8-A22A-6680F423BDBB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F7A177E8-95EC-43B8-A22A-6680F423BDBB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F7A177E8-95EC-43B8-A22A-6680F423BDBB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F4CBBF34-471E-4AC0-99F0-6CECC1C31885}
+	EndGlobalSection
+EndGlobal

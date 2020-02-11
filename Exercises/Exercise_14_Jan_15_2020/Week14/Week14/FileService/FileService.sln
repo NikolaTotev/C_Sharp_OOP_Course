@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29230.47
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FileService", "FileService\FileService.csproj", "{4983E74A-B589-44D8-8F71-39455D2C972E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FileServiceClientApp", "FileServiceClientApp\FileServiceClientApp.csproj", "{2611A12E-6048-4073-B74C-3D499BB4363B}"
+	ProjectSection(ProjectDependencies) = postProject
+		{4983E74A-B589-44D8-8F71-39455D2C972E} = {4983E74A-B589-44D8-8F71-39455D2C972E}
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4983E74A-B589-44D8-8F71-39455D2C972E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4983E74A-B589-44D8-8F71-39455D2C972E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4983E74A-B589-44D8-8F71-39455D2C972E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4983E74A-B589-44D8-8F71-39455D2C972E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2611A12E-6048-4073-B74C-3D499BB4363B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2611A12E-6048-4073-B74C-3D499BB4363B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2611A12E-6048-4073-B74C-3D499BB4363B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2611A12E-6048-4073-B74C-3D499BB4363B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {162082AF-031E-4067-9600-5A0B765C3454}
+	EndGlobalSection
+EndGlobal
