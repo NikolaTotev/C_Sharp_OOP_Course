@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -14,20 +13,21 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace SimpleMultiThreadFileServer
+namespace Server
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
     public partial class MainWindow : Window
     {
-        private FileServer m_Server;
+        private ServerLogic server;
+
         public MainWindow()
         {
             InitializeComponent();
-            m_Server = new FileServer();
-            m_Server.ServerNotification += DisplayMessage;
-            m_Server.Start();
+            server = new ServerLogic();
+            server.ServerNotification += DisplayMessage;
+            server.Start();
         }
 
         private void DisplayMessage(string message)
@@ -42,14 +42,9 @@ namespace SimpleMultiThreadFileServer
             }
         }
 
-        private void Tb_Input_OnKeyDown(object sender, KeyEventArgs e)
+        private void MainWindow_OnClosed(object sender, EventArgs e)
         {
-            throw new NotImplementedException();
-        }
-
-        private void Window_Closing(object sender, CancelEventArgs e)
-        {
-            m_Server.Stop();
+            server.Stop();
         }
     }
 }

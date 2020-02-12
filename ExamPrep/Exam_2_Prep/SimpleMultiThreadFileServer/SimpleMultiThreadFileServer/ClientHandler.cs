@@ -31,7 +31,7 @@ namespace SimpleMultiThreadFileServer
                 {
                     ClientEvent?.Invoke($"\r\n[{DateTime.Now}] Client update: Client connected.");
                 }
-                else
+                else 
                 {
                     ClientEvent?.Invoke(
                         $"\r\n[{DateTime.Now}] Client update: Client disconnected before any data was transmitted.");
@@ -70,7 +70,6 @@ namespace SimpleMultiThreadFileServer
                         m_Writer.WriteLine(
                             $"[{DateTime.Now}] Server >> Hello, {clientName}! I have received your message. It said - {clientMessage}. Have a nice day!");
                         m_Writer.Flush();
-                        //Thread.Sleep(300);
                     }
                 }
                 catch (Exception e)

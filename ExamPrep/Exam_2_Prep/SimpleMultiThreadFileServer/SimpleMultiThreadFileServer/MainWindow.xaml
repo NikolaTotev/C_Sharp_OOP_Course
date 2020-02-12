@@ -17,7 +17,7 @@
                  Width="488" VerticalScrollBarVisibility="Disabled"
                  FontWeight="Bold" MaxLines="1"
                  IsEnabled="False" KeyDown="Tb_Input_OnKeyDown"/>
-        <TextBox x:Name="TxtDisplay" HorizontalAlignment="Left" Height="394"
+        <TextBox x:Name="Tb_Display" HorizontalAlignment="Left" Height="394"
                  Margin="8,4,0,0" Grid.Row="1" TextWrapping="Wrap"
                  VerticalAlignment="Top"
                  Width="488" VerticalScrollBarVisibility="Auto" FontWeight="Bold"

@@ -1,0 +1,30 @@
+﻿<UserControl x:Class="Components.DataForm"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Components"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="450" Background="WhiteSmoke">
+    <Grid> 
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="3*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+            </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Label x:Name="Lb_Name" Content="{Binding Path=LbFileNameText,
+    RelativeSource={RelativeSource AncestorType={x:Type local:DataForm}}}" Grid.Column="0" Grid.Row="0" VerticalAlignment="Center" HorizontalAlignment="Center"  FontWeight="Black" FontFamily="Roboto" FontSize="20" Foreground="DarkOrange"></Label>
+        <Label x:Name="Lb_FileContents" Content="{Binding Path=LbFileContentsText,
+    RelativeSource={RelativeSource AncestorType={x:Type local:DataForm}}}" Grid.Column="0" Grid.Row="1" VerticalAlignment="Center" HorizontalAlignment="Center"  FontWeight="Black" FontFamily="Roboto" FontSize="20" Foreground="DarkOrange"></Label>
+        <Button x:Name="Btn_Save" Content="{Binding Path=BtnSaveText,
+    RelativeSource={RelativeSource AncestorType={x:Type local:DataForm}}}" Click="Btn_Save_OnClick" Grid.Column="0" Grid.Row="2" Margin="50,30,50,30" Background="WhiteSmoke" BorderBrush="DarkOrange" BorderThickness="3" FontWeight="Black" FontFamily="Roboto" FontSize="15" Foreground="DarkOrange" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
+        <Button x:Name="Btn_Request" Content="{Binding Path=BtnRequestText,
+    RelativeSource={RelativeSource AncestorType={x:Type local:DataForm}}}" Click="Btn_Request_OnClick" Grid.Column="1" Grid.Row="2" Margin="50,30,50,30" Background="WhiteSmoke" BorderBrush="DarkOrange" BorderThickness="3" FontWeight="Black" FontFamily="Roboto" FontSize="15" Foreground="DarkOrange" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
+        <TextBox x:Name="Tbx_FileName" Grid.Column="1" Margin="20,30,20,30" BorderBrush="DarkOrange" BorderThickness="2"/>
+        <RichTextBox x:Name="Rtf_FileContents" Grid.Row="1" Grid.Column="1" Margin="20,30,20,30" BorderBrush="DarkOrange" BorderThickness="2" />
+    </Grid>
+</UserControl>
